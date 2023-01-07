@@ -104,6 +104,8 @@ DATABASES = {
     }
 }
 
+DATABASE_ROUTERS = ['user.router.AuthRouter',]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -191,3 +193,5 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
+AUTH_USER_MODEL = 'user.UserAccount'
